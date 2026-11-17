@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Historia de la Selección Argentina: títulos, Mundiales, figuras y momentos inolvidables.">
+
+    <!-- Política básica de seguridad -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none';">
+
+    <meta name="referrer" content="no-referrer">
+
+    <title>La Albiceleste — Historia de la Selección Argentina</title>
+
+    <style>
+        :root {
+            --navy: #071426;
+            --navy2: #0d2038;
+            --sky: #79c9f2;
+            --sky2: #b9e8ff;
+            --white: #f5f9ff;
+            --muted: #a8b8ca;
+            --gold: #f4c96b;
+            --line: rgba(255,255,255,.12);
+            --card: rgba(255,255,255,.055);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--navy);
+            color: var(--white);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* NAVEGACIÓN */
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(7,20,38,.94);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-weight: 800;
+            letter-spacing: .04em;
+        }
+
+        .crest {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg,var(--sky),#fff);
+            display: grid;
+            place-items: center;
+            color: #102944;
+            font-size: 19px;
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 22px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .navlinks a:hover {
+            color: white;
+        }
+
+        .menu {
+            display: none;
+            background: none;
+            border: 1px solid var(--line);
+            color: white;
+            border-radius: 9px;
+            padding: 8px 11px;
+            cursor: pointer;
+        }
+
+        /* PORTADA */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 105px 0 88px;
+            background:
+                radial-gradient(ellipse at 82% 20%,rgba(121,201,242,.2),transparent 34%),
+                linear-gradient(135deg,#0b1c33,#102c49 65%,#0b1b30);
+        }
+
+        .hero:before,
+        .hero:after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            border: 1px solid rgba(185,232,255,.13);
+            border-radius: 50%;
+        }
+
+        .hero:before {
+            width: 550px;
+            height: 550px;
+            right: -110px;
+            top: -250px;
+        }
+
+        .hero:after {
+            width: 390px;
+            height: 390px;
+            right: -30px;
+            top: -170px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--sky2);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow:before {
+            content: "";
+            width: 25px;
+            height: 2px;
+            background: var(--sky);
+        }
+
+        h1 {
+            font-size: clamp(43px,7vw,78px);
+            line-height: .99;
+            letter-spacing: -.055em;
+            max-width: 780px;
+            margin: 24px 0;
+        }
+
+        .hero h1 span {
+            color: var(--sky);
+        }
+
+        .lead {
+            max-width: 640px;
+            color: #c3d2e2;
+            font-size: 17px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 750;
+            font-size: 13px;
+            background: var(--sky);
+            color: #08203a;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,.24);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 12px;
+            margin-top: 55px;
+            max-width: 760px;
+        }
+
+        .stat {
+            padding: 17px 18px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: rgba(255,255,255,.045);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 28px;
+            letter-spacing: -.04em;
+        }
+
+        .stat span {
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        /* SECCIONES */
+
+        .section {
+            padding: 82px 0;
+        }
+
+        .section.alt {
+            background: #0a192c;
+        }
+
+        .section-head {
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .kicker {
+            color: var(--sky);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .section h2 {
+            font-size: clamp(30px,4vw,46px);
+            line-height: 1.1;
+            letter-spacing: -.04em;
+            margin: 10px 0 13px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* TROFEOS */
+
+        .trophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 16px;
+        }
+
+        .trophy {
+            padding: 25px;
+            border-radius: 18px;
+            background: linear-gradient(145deg,rgba(121,201,242,.12),rgba(255,255,255,.035));
+            border: 1px solid var(--line);
+            min-height: 205px;
+        }
+
+        .trophy .year {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .12em;
+        }
+
+        .trophy .cup {
+            font-size: 30px;
+            margin: 17px 0 8px;
+        }
+
+        .trophy h3 {
+            font-size: 20px;
+            margin: 0 0 6px;
+        }
+
+        .trophy p {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* LÍNEA DE TIEMPO */
+
+        .timeline-tools {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter {
+            border: 1px solid var(--line);
+            background: transparent;
+            color: var(--muted);
+            padding: 8px 13px;
+            border-radius: 99px;
+            font: inherit;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .filter.active,
+        .filter:hover {
+            background: var(--sky);
+            color: #08203a;
+            border-color: var(--sky);
+        }
+
+        .search {
+            background: #0b1b30;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 10px 13px;
+            color: white;
+            min-width: 220px;
+            outline: none;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 850px;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 77px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: linear-gradient(var(--sky),rgba(121,201,242,.08));
+        }
+
+        .event {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 40px;
+            padding: 0 0 25px;
+            position: relative;
+        }
+
+        .event[hidden] {
+            display: none;
+        }
+
+        .event-year {
+            font-weight: 850;
+            color: var(--sky);
+            font-size: 14px;
+            padding-top: 20px;
+        }
+
+        .event-card {
+            position: relative;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 20px;
+            background: var(--card);
+        }
+
+        .event-card:before {
+            content: "";
+            position: absolute;
+            left: -29px;
+            top: 25px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--sky);
+            box-shadow: 0 0 0 5px rgba(121,201,242,.12);
+        }
+
+        .event-card h3 {
+            margin: 0 0 5px;
+            font-size: 17px;
+        }
+
+        .event-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--gold);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 800;
+        }
+
+        /* JUGADORES */
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 14px;
+        }
+
+        .person {
+            padding: 21px;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            background: var(--card);
+        }
+
+        .person .initial {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(121,201,242,.14);
+            color: var(--sky2);
+            display: grid;
+            place-items: center;
+            font-weight: 850;
+            margin-bottom: 15px;
+        }
+
+        .person h3 {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .person small {
+            color: var(--gold);
+            font-size: 11px;
+        }
+
+        .person p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 8px 0 0;
+        }
+
+        /* IDENTIDAD Y ENTRENADORES */
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .info-panel {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 25px;
+            background: linear-gradient(145deg,rgba(121,201,242,.09),rgba(255,255,255,.025));
+        }
+
+        .info-panel h3 {
+            margin: 0 0 12px;
+        }
+
+        .info-panel p,
+        .info-panel li {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .info-panel ul {
+            padding-left: 19px;
+            margin-bottom: 0;
+        }
+
+        /* TABLA */
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 480px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 14px 17px;
+            border-bottom: 1px solid var(--line);
+            font-size: 13px;
+        }
+
+        th {
+            color: var(--sky2);
+            background: rgba(121,201,242,.07);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        td {
+            color: #dce7f2;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        /* CONCLUSIÓN */
+
+        .conclusion {
+            padding: 34px;
+            border-radius: 20px;
+            background: linear-gradient(110deg,rgba(121,201,242,.17),rgba(255,255,255,.04));
+            border: 1px solid rgba(121,201,242,.25);
+        }
+
+        .conclusion p {
+            color: #d0deeb;
+            max-width: 850px;
+            margin-bottom: 0;
+        }
+
+        /* PIE DE PÁGINA */
+
+        .footer {
+            padding: 30px 0;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .backtop {
+            color: var(--sky2);
+        }
+
+        /* DISEÑO RESPONSIVE */
+
+        @media(max-width:760px) {
+            .navlinks {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #0b1b30;
+                padding: 18px 22px;
+                border-bottom: 1px solid var(--line);
+                flex-direction: column;
+            }
+
+            .navlinks.open {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 76px 0 65px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2,1fr);
+                margin-top: 38px;
+            }
+
+            .trophy-grid,
+            .people-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .split {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 62px 0;
+            }
+
+            .timeline:before {
+                left: 57px;
+            }
+
+            .event {
+                grid-template-columns: 40px 1fr;
+                gap: 30px;
+            }
+
+            .event-card:before {
+                left: -24px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            .timeline-tools {
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="wrap nav">
+
+        <a class="brand" href="#inicio">
+            <span class="crest">✦</span>
+            <span>ALBICELESTE<span style="color:var(--sky)">.</span></span>
+        </a>
+
+        <nav class="navlinks" id="navlinks">
+            <a href="#titulos">Títulos</a>
+            <a href="#historia">Historia</a>
+            <a href="#figuras">Figuras</a>
+            <a href="#identidad">Identidad</a>
+        </nav>
+
+        <button class="menu" id="menu" aria-label="Abrir menú">
+            ☰
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- PORTADA -->
+
+    <section class="hero" id="inicio">
+        <div class="wrap">
+
+            <div class="eyebrow">Más de un siglo de fútbol</div>
+
+            <h1>
+                Una historia<br>
+                pintada de <span>celeste y blanco.</span>
+            </h1>
+
+            <p class="lead">
+                Desde los primeros clásicos sudamericanos hasta las grandes noches mundialistas,
+                repasamos el camino de la Selección Argentina: sus títulos, sus leyendas y los
+                momentos que quedaron en la memoria.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn" href="#historia">Explorar la historia ↘</a>
+                <a class="btn secondary" href="#titulos">Ver las conquistas</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>3</strong>
+                    <span>Copas del Mundo</span>
+                </div>
+
+                <div class="stat">
+                    <strong>16</strong>
+                    <span>Copas América</span>
+                </div>
+
+                <div class="stat">
+                    <strong>2022</strong>
+                    <span>Último Mundial ganado</span>
+                </div>
+
+                <div class="stat">
+                    <strong>1901</strong>
+                    <span>Primer partido internacional</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TÍTULOS -->
+
+    <section class="section" id="titulos">
+        <div class="wrap">
+
+            <div class="section-head">
+                <div class="kicker">Una vitrina histórica</div>
+                <h2>Las grandes conquistas</h2>
+                <p>
+                    Los títulos que marcaron distintas generaciones y llevaron a la Albiceleste
+                    a lo más alto.
+                </p>
+            </div>
+
+            <div class="trophy-grid">
+
+                <article class="trophy">
+                    <div class="year">25 DE JUNIO · 1978</div>
+                    <div class="cup">🏆</div>
+                    <h3>Primera estrella</h3>
+                    <p>
+                        Argentina venció 3-1 a Países Bajos en el Monumental.
+                        Mario Kempes fue una de las grandes figuras.
+                    </p>
+                </article>
+
+                <article class="trophy">
+                    <div class="year">29 DE JUNIO · 1986</div>
+                    <div class="cup">🏆</div>
+                    <h3>La era de Maradona</h3>
+                    <p>
+                        Con Diego como capitán, Argentina derrotó 3-2 a Alemania Federal
+                        en la final de México.
+                    </p>
+                </article>
+
+                <article class="trophy">
+                    <div class="year">18 DE DICIEMBRE · 2022</div>
+                    <div class="cup">🏆</div>
+                    <h3>La tercera estrella</h3>
+                    <p>
+                        En una final inolvidable, Argentina empató 3-3 con Francia
+                        y ganó 4-2 por penales en Qatar.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA -->
+
+    <section class="section alt" id="historia">
+        <div class="wrap">
+
+            <div class="section-head">
+                <div class="kicker">1901 — 2026</div>
+                <h2>El recorrido de la Selección</h2>
+                <p>
+                    Una línea de tiempo con los principales cambios de época,
+                    títulos y partidos decisivos.
+                </p>
+            </div>
+
+            <div class="timeline-tools">
+
+                <div class="filters">
+                    <button class="filter active" data-filter="todos">Todo</button>
+                    <button class="filter" data-filter="inicios">Primeras décadas</button>
+                    <button class="filter" data-filter="mundiales">Mundiales</button>
+                    <button class="filter" data-filter="moderna">Etapa moderna</button>
+                </div>
+
+                <input
+                    class="search"
+                    id="search"
+                    type="search"
+                    placeholder="Buscar año o acontecimiento…"
+                    aria-label="Buscar en la línea de tiempo"
+                >
+
+            </div>
+
+            <div class="timeline" id="timeline">
+
+                <article class="event" data-category="inicios">
+                    <div class="event-year">1901</div>
+                    <div class="event-card">
+                        <h3>El primer partido internacional</h3>
+                        <p>
+                            Argentina disputó ante Uruguay uno de sus primeros encuentros
+                            internacionales registrados. El fútbol sudamericano comenzaba
+                            a construir su historia.
+                        </p>
+                        <span class="tag">Los comienzos</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="inicios">
+                    <div class="event-year">1916–1928</div>
+                    <div class="event-card">
+                        <h3>Primeros éxitos continentales</h3>
+                        <p>
+                            Argentina fue protagonista del primer Campeonato Sudamericano
+                            en 1916, ganó su primer título en 1921 y obtuvo la medalla de
+                            plata en los Juegos Olímpicos de Ámsterdam 1928.
+                        </p>
+                        <span class="tag">Crecimiento sudamericano</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">1930</div>
+                    <div class="event-card">
+                        <h3>La primera final del mundo</h3>
+                        <p>
+                            Argentina llegó a la definición inaugural de la Copa Mundial.
+                            Perdió 4-2 ante Uruguay y Guillermo Stábile terminó como máximo
+                            goleador del torneo con ocho tantos.
+                        </p>
+                        <span class="tag">Subcampeón mundial</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="inicios">
+                    <div class="event-year">1937–1959</div>
+                    <div class="event-card">
+                        <h3>Dominio en Sudamérica</h3>
+                        <p>
+                            La Selección sumó campeonatos sudamericanos en 1937, 1941,
+                            1945, 1946, 1947, 1955, 1957 y 1959. Fue una etapa de grandes
+                            futbolistas y poder ofensivo.
+                        </p>
+                        <span class="tag">Época dorada continental</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">1978</div>
+                    <div class="event-card">
+                        <h3>La primera Copa del Mundo</h3>
+                        <p>
+                            Con César Luis Menotti como entrenador, Argentina venció 3-1
+                            a Países Bajos en el Monumental. Mario Kempes fue figura y
+                            goleador del campeonato.
+                        </p>
+                        <span class="tag">Campeón del mundo</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">1986</div>
+                    <div class="event-card">
+                        <h3>Maradona y la segunda estrella</h3>
+                        <p>
+                            En México, el equipo de Carlos Bilardo derrotó 3-2 a Alemania
+                            Federal. La actuación de Diego Maradona, especialmente ante
+                            Inglaterra y Bélgica, quedó en la historia.
+                        </p>
+                        <span class="tag">Campeón del mundo</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">1990</div>
+                    <div class="event-card">
+                        <h3>Otra final mundialista</h3>
+                        <p>
+                            Argentina llegó a la final de Italia 1990, pero cayó 1-0
+                            ante Alemania Federal. Sergio Goycochea fue una de las
+                            figuras del recorrido.
+                        </p>
+                        <span class="tag">Subcampeón mundial</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="inicios">
+                    <div class="event-year">1991–1993</div>
+                    <div class="event-card">
+                        <h3>Regreso a la cima continental</h3>
+                        <p>
+                            Con Alfio Basile como entrenador, Argentina ganó las Copas
+                            América de 1991 y 1993. También conquistó la Copa
+                            Confederaciones 1992 y la Artemio Franchi 1993.
+                        </p>
+                        <span class="tag">Títulos continentales</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="moderna">
+                    <div class="event-year">2004–2008</div>
+                    <div class="event-card">
+                        <h3>Oro olímpico consecutivo</h3>
+                        <p>
+                            La Selección Sub-23 ganó las medallas de oro en Atenas 2004
+                            y Pekín 2008. Fueron logros importantes de las generaciones
+                            de Carlos Tévez, Lionel Messi y Ángel Di María.
+                        </p>
+                        <span class="tag">Juegos Olímpicos · Sub-23</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">2014</div>
+                    <div class="event-card">
+                        <h3>La final de Brasil</h3>
+                        <p>
+                            Dirigida por Alejandro Sabella, Argentina llegó a la final
+                            y perdió 1-0 ante Alemania en tiempo suplementario.
+                            Messi recibió el Balón de Oro del torneo.
+                        </p>
+                        <span class="tag">Subcampeón mundial</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="moderna">
+                    <div class="event-year">2021</div>
+                    <div class="event-card">
+                        <h3>La Copa América del Maracaná</h3>
+                        <p>
+                            Argentina venció 1-0 a Brasil con gol de Ángel Di María.
+                            El título terminó con una espera de 28 años sin campeonatos
+                            oficiales de la Selección mayor.
+                        </p>
+                        <span class="tag">Campeón de América</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="moderna">
+                    <div class="event-year">2022</div>
+                    <div class="event-card">
+                        <h3>Finalissima y tercera Copa del Mundo</h3>
+                        <p>
+                            Argentina derrotó 3-0 a Italia en Wembley y luego conquistó
+                            Qatar 2022: empató 3-3 con Francia y ganó 4-2 por penales.
+                            Messi levantó la Copa como capitán.
+                        </p>
+                        <span class="tag">Campeón del mundo</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="moderna">
+                    <div class="event-year">2024</div>
+                    <div class="event-card">
+                        <h3>Bicampeonato de América</h3>
+                        <p>
+                            Argentina venció 1-0 a Colombia con gol de Lautaro Martínez
+                            en el tiempo suplementario y alcanzó su decimosexta
+                            Copa América.
+                        </p>
+                        <span class="tag">Campeón de América</span>
+                    </div>
+                </article>
+
+                <article class="event" data-category="mundiales">
+                    <div class="event-year">2026</div>
+                    <div class="event-card">
+                        <h3>Un nuevo subcampeonato</h3>
+                        <p>
+                            Según el documento de base, Argentina llegó a la final
+                            del Mundial 2026 y perdió 1-0 ante España. Fue su cuarta
+                            final mundialista perdida.
+                        </p>
+                        <span class="tag">Subcampeón mundial</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="no-results" style="display:none;color:var(--muted);font-size:14px">
+                No se encontraron acontecimientos con esa búsqueda.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FIGURAS -->
+
+    <section class="section" id="figuras">
+        <div class="wrap">
+
+            <div class="section-head">
+                <div class="kicker">Nombres inolvidables</div>
+                <h2>Las figuras de cada generación</h2>
+                <p>
+                    Futbolistas que dejaron una marca por sus goles, liderazgo,
+                    talento o actuaciones decisivas.
+                </p>
+            </div>
+
+            <div class="people-grid">
+
+                <article class="person">
+                    <div class="initial">GS</div>
+                    <h3>Guillermo Stábile</h3>
+                    <small>1930</small>
+                    <p>Máximo goleador del primer Mundial, con ocho tantos.
+                        jugo varios clubes como Huracán, Genoa y Red Star.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">MK</div>
+                    <h3>Mario Kempes</h3>
+                    <small>1978</small>
+                    <p>Figura de la primera conquista mundialista y goleador del torneo.
+                        se caracterizó por su potencia y capacidad de definición.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">DM</div>
+                    <h3>Diego Maradona</h3>
+                    <small>1980–1990</small>
+                    <p>Capitán y figura central del equipo campeón de México 1986.
+                        lo que lo hacia diferente era su habilidad para eludir rivales y generar jugadas de gol.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">GB</div>
+                    <h3>Gabriel Batistuta</h3>
+                    <small>1990–2000</small>
+                    <p>Delantero clave de los títulos continentales de 1991 y 1993.
+                        era un delantero potente y preciso, conocido por su capacidad de marcar goles desde cualquier posición.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">LM</div>
+                    <h3>Lionel Messi</h3>
+                    <small>2005–2026</small>
+                    <p>
+                        Capitán de la generación campeona de América en 2021 y 2024
+                        y del mundo en 2022.
+                        era un jugador excepcional, conocido por su habilidad para driblar, su visión de juego y su capacidad para marcar goles en momentos cruciales.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">AD</div>
+                    <h3>Ángel Di María</h3>
+                    <small>2008–2024</small>
+                    <p>
+                        Autor de goles decisivos en las finales de la Copa América
+                        2021 y el Mundial 2022.
+                        era un jugador versátil, capaz de jugar en varias posiciones ofensivas y conocido por su velocidad y habilidad para crear oportunidades de gol.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">EM</div>
+                    <h3>Emiliano Martínez</h3>
+                    <small>2021–2024</small>
+                    <p>
+                        Arquero protagonista de las conquistas recientes y ganador
+                        del Guante de Oro en Qatar 2022.
+                        tenia un estilo de juego seguro y confiable, destacándose por sus reflejos y capacidad para realizar atajadas cruciales en momentos importantes.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">LK</div>
+                    <h3>Lautaro Martínez</h3>
+                    <small>2021–2024</small>
+                    <p>Marcó el gol de la final de la Copa América 2024 ante Colombia.
+                        es un delantero versátil, capaz de jugar en varias posiciones ofensivas y conocido por su velocidad y habilidad para crear oportunidades de gol.
+                    </p>
+                </article>
+
+                <article class="person">
+                    <div class="initial">MP</div>
+                    <h3>Más referentes</h3>
+                    <small>Distintas épocas</small>
+                    <p>
+                        Alfredo Di Stéfano, Passarella, Fillol, Redondo,
+                        Mascherano, De Paul y muchos más.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIDAD -->
+
+    <section class="section alt" id="identidad">
+        <div class="wrap">
+
+            <div class="section-head">
+                <div class="kicker">Más que resultados</div>
+                <h2>Una identidad que atraviesa generaciones</h2>
+                <p>
+                    La historia de la Selección también se explica por sus entrenadores,
+                    su manera de jugar y el vínculo con la gente.
+                </p>
+            </div>
+
+            <div class="split">
+
+                <div class="info-panel">
+                    <h3>Entrenadores que marcaron época</h3>
+
+                    <ul>
+                        <li>
+                            <b>César Luis Menotti:</b>
+                            campeón en 1978; apostó por un juego ofensivo y colectivo.
+                        </li>
+
+                        <li>
+                            <b>Carlos Bilardo:</b>
+                            campeón en 1986 y subcampeón en 1990;
+                            destacó por su preparación táctica.
+                        </li>
+
+                        <li>
+                            <b>Alfio Basile:</b>
+                            ganó las Copas América de 1991 y 1993.
+                        </li>
+
+                        <li>
+                            <b>Alejandro Sabella:</b>
+                            condujo al equipo a la final de Brasil 2014.
+                        </li>
+
+                        <li>
+                            <b>Lionel Scaloni:</b>
+                            lideró la etapa de títulos de 2021, 2022 y 2024.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Cómo evolucionó el juego</h3>
+
+                    <p>
+                        En sus primeras décadas, Argentina se destacó por la técnica,
+                        la creatividad y el juego ofensivo. Con el paso del tiempo
+                        incorporó mayor preparación física, presión y organización
+                        defensiva.
+                    </p>
+
+                    <p>
+                        En la etapa de Scaloni, el equipo combinó el buen manejo de
+                        pelota con solidaridad defensiva, intensidad y capacidad
+                        para adaptarse a distintos rivales.
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="conclusion">
+                <div class="kicker">El legado albiceleste</div>
+                <h2>Una pasión compartida</h2>
+
+                <p>
+                    La Selección Argentina es mucho más que un equipo: forma parte
+                    de la identidad cultural del país. Sus triunfos, derrotas y
+                    grandes figuras generan recuerdos compartidos y reúnen a
+                    personas de distintas generaciones. Las conquistas de 1978,
+                    1986 y 2022 son capítulos centrales de una historia construida
+                    con talento, esfuerzo, perseverancia y trabajo en equipo.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESUMEN MUNDIALISTA -->
+
+    <section class="section" id="resumen">
+        <div class="wrap">
+
+            <div class="section-head">
+                <div class="kicker">En números y fechas</div>
+                <h2>Resumen mundialista</h2>
+                <p>
+                    Las finales y actuaciones más destacadas mencionadas
+                    en el documento.
+                </p>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mundial</th>
+                            <th>Resultado argentino</th>
+                            <th>Dato destacado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1930</td>
+                            <td>Subcampeón</td>
+                            <td>Primera final de la historia</td>
+                        </tr>
+
+                        <tr>
+                            <td>1978</td>
+                            <td>Campeón</td>
+                            <td>Primera estrella</td>
+                        </tr>
+
+                        <tr>
+                            <td>1986</td>
+                            <td>Campeón</td>
+                            <td>Maradona, capitán y figura</td>
+                        </tr>
+
+                        <tr>
+                            <td>1990</td>
+                            <td>Subcampeón</td>
+                            <td>Final ante Alemania Federal</td>
+                        </tr>
+
+                        <tr>
+                            <td>2014</td>
+                            <td>Subcampeón</td>
+                            <td>Final ante Alemania</td>
+                        </tr>
+
+                        <tr>
+                            <td>2022</td>
+                            <td>Campeón</td>
+                            <td>Tercera estrella en Qatar</td>
+                        </tr>
+
+                        <tr>
+                            <td>2026</td>
+                            <td>Subcampeón</td>
+                            <td>Final ante España, según el documento</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<section class="section alt" id="preguntas">
+    <div class="wrap">
+
+        <div class="section-head">
+            <div class="kicker">Para conocer más</div>
+            <h2>Preguntas frecuentes</h2>
+            <p>
+                Seis preguntas para comprender los momentos,
+                protagonistas y logros más importantes de la Selección Argentina.
+            </p>
+        </div>
+
+        <div class="faq">
+
+            <details>
+                <summary>
+                    1. ¿Cuáles fueron los tres títulos mundiales que consiguió Argentina?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        La Selección Argentina consiguió tres Copas del Mundo:
+                        en 1978, 1986 y 2022. Cada campeonato tuvo una importancia
+                        especial en la historia del fútbol argentino.
+                    </p>
+
+                    <p>
+                        En 1978, Argentina consiguió su primer Mundial jugando como
+                        local. El equipo dirigido por César Luis Menotti venció
+                        3-1 a Países Bajos en la final, con Mario Kempes como una
+                        de sus principales figuras y máximo goleador del torneo.
+                    </p>
+
+                    <p>
+                        En 1986, Argentina consiguió su segunda Copa del Mundo
+                        en México, bajo la dirección técnica de Carlos Bilardo.
+                        Diego Maradona fue el capitán y la gran figura del
+                        campeonato, especialmente por sus actuaciones frente
+                        a Inglaterra y Bélgica. En la final, Argentina derrotó
+                        3-2 a Alemania Federal.
+                    </p>
+
+                    <p>
+                        En 2022, Argentina conquistó su tercera Copa del Mundo
+                        en Qatar. El equipo dirigido por Lionel Scaloni venció
+                        a Francia en una final que terminó 3-3 y se definió
+                        por penales, con un resultado de 4-2. Lionel Messi fue
+                        el capitán y Emiliano Martínez tuvo intervenciones
+                        fundamentales.
+                    </p>
+
+                    <p>
+                        Estos tres títulos representan distintas generaciones
+                        de futbolistas y entrenadores que llevaron a Argentina
+                        a lo más alto del fútbol mundial.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    2. ¿Qué importancia tuvieron Diego Maradona y Lionel Messi?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        Diego Maradona y Lionel Messi fueron dos de los futbolistas
+                        más importantes de la historia de la Selección Argentina.
+                        Ambos se destacaron por su talento, liderazgo y capacidad
+                        para influir en partidos decisivos.
+                    </p>
+
+                    <p>
+                        Diego Maradona fue el principal referente del equipo
+                        campeón del Mundial de México 1986. Durante ese torneo
+                        realizó actuaciones extraordinarias, especialmente
+                        contra Inglaterra, cuando marcó los dos goles más
+                        recordados de su carrera: la Mano de Dios y el Gol del
+                        Siglo. Además, fue fundamental en la semifinal contra
+                        Bélgica y en la conquista de la segunda Copa del Mundo.
+                    </p>
+
+                    <p>
+                        Por su parte, Lionel Messi representó a varias generaciones
+                        de la Selección durante más de dos décadas. Después de
+                        disputar diferentes finales sin conseguir títulos con
+                        el equipo mayor, logró conquistar la Copa América 2021,
+                        la Finalissima 2022, el Mundial de Qatar 2022 y la
+                        Copa América 2024.
+                    </p>
+
+                    <p>
+                        Maradona y Messi dejaron un legado enorme. El primero
+                        fue el símbolo de la generación de 1986, mientras que
+                        el segundo lideró una de las etapas más exitosas del
+                        fútbol argentino moderno.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    3. ¿Por qué fue tan importante la Copa América 2021?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        La conquista de la Copa América 2021 fue muy importante
+                        porque permitió que Argentina terminara con una espera
+                        de 28 años sin conseguir títulos oficiales con la
+                        Selección mayor.
+                    </p>
+
+                    <p>
+                        El torneo se disputó en Brasil y el equipo dirigido
+                        por Lionel Scaloni llegó a la final después de superar
+                        diferentes dificultades durante la competición.
+                        En la definición enfrentó al seleccionado brasileño
+                        en el estadio Maracaná, uno de los escenarios más
+                        importantes del fútbol mundial.
+                    </p>
+
+                    <p>
+                        El partido terminó con una victoria argentina por 1-0
+                        gracias a un gol de Ángel Di María, quien aprovechó
+                        una oportunidad ofensiva para marcar el único tanto
+                        del encuentro.
+                    </p>
+
+                    <p>
+                        Este campeonato tuvo un significado especial para
+                        Lionel Messi, ya que representó su primer gran título
+                        oficial con la Selección mayor. También fortaleció
+                        la confianza del equipo y permitió consolidar un grupo
+                        de futbolistas que posteriormente conseguiría la
+                        Finalissima, el Mundial de Qatar 2022 y la Copa
+                        América 2024.
+                    </p>
+
+                    <p>
+                        La victoria fue celebrada por millones de argentinos
+                        y marcó el comienzo de una etapa histórica de grandes
+                        éxitos internacionales.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    4. ¿Qué papel tuvieron los entrenadores en los éxitos argentinos?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        Los entrenadores tuvieron un papel fundamental en
+                        la historia de la Selección Argentina porque fueron
+                        responsables de organizar los equipos, desarrollar
+                        estrategias y preparar a los futbolistas para competir
+                        internacionalmente.
+                    </p>
+
+                    <p>
+                        César Luis Menotti dirigió al seleccionado campeón
+                        del Mundial de 1978. Su propuesta se caracterizaba
+                        por un fútbol ofensivo, técnico y basado en el
+                        funcionamiento colectivo.
+                    </p>
+
+                    <p>
+                        Carlos Salvador Bilardo condujo a Argentina a la
+                        conquista del Mundial de 1986 y al subcampeonato
+                        de 1990. Se destacó por su preparación táctica,
+                        disciplina y capacidad para adaptar el equipo a
+                        cada rival.
+                    </p>
+
+                    <p>
+                        Alfio Basile también fue importante porque dirigió
+                        al seleccionado campeón de las Copas América de
+                        1991 y 1993.
+                    </p>
+
+                    <p>
+                        Alejandro Sabella consiguió llevar a Argentina
+                        a la final del Mundial de Brasil 2014, después de
+                        construir un equipo sólido y competitivo.
+                    </p>
+
+                    <p>
+                        Finalmente, Lionel Scaloni inició una de las etapas
+                        más exitosas de la historia reciente. Bajo su dirección,
+                        Argentina consiguió la Copa América 2021, la Finalissima
+                        2022, el Mundial de Qatar 2022 y la Copa América 2024.
+                    </p>
+
+                    <p>
+                        Cada entrenador aportó diferentes ideas y estilos
+                        de juego, pero todos compartieron el objetivo de
+                        representar al país de la mejor manera posible.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    5. ¿Cuáles fueron algunos de los futbolistas más importantes?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        A lo largo de su historia, Argentina tuvo numerosos
+                        futbolistas que se destacaron por sus habilidades,
+                        goles, liderazgo y participación en campeonatos
+                        importantes.
+                    </p>
+
+                    <p>
+                        Guillermo Stábile fue una de las primeras grandes
+                        figuras internacionales, ya que terminó como máximo
+                        goleador del Mundial de 1930 con ocho tantos.
+                    </p>
+
+                    <p>
+                        Mario Kempes fue fundamental en el Mundial de 1978.
+                        Marcó dos goles en la final contra Países Bajos y
+                        terminó como máximo goleador del campeonato.
+                    </p>
+
+                    <p>
+                        Diego Maradona fue la gran figura del Mundial de 1986.
+                        Su talento individual, liderazgo y capacidad para
+                        decidir partidos fueron fundamentales para conseguir
+                        la segunda Copa del Mundo.
+                    </p>
+
+                    <p>
+                        Gabriel Batistuta se destacó durante los años noventa
+                        por su capacidad goleadora y fue una de las principales
+                        figuras de los títulos continentales de 1991 y 1993.
+                    </p>
+
+                    <p>
+                        En la generación más reciente se destacaron Lionel
+                        Messi, Ángel Di María, Sergio Agüero, Javier Mascherano,
+                        Rodrigo De Paul, Lautaro Martínez y Emiliano Martínez.
+                    </p>
+
+                    <p>
+                        Todos estos jugadores aportaron diferentes cualidades
+                        y contribuyeron a que Argentina mantuviera su
+                        protagonismo en el fútbol internacional.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    6. ¿Por qué la Selección Argentina es importante para la cultura del país?
+                </summary>
+
+                <div class="faq-content">
+                    <p>
+                        La Selección Argentina tiene una importancia muy
+                        grande para la sociedad porque representa la identidad
+                        nacional, la pasión por el deporte y el sentimiento
+                        de pertenencia de millones de personas.
+                    </p>
+
+                    <p>
+                        El fútbol forma parte de la cultura argentina desde
+                        hace más de un siglo. Los clubes, los barrios y las
+                        familias contribuyeron a que este deporte se convirtiera
+                        en una de las actividades más populares del país.
+                    </p>
+
+                    <p>
+                        Durante los Mundiales y las Copas América, la Selección
+                        reúne a personas de diferentes edades y lugares.
+                        Los partidos se convierten en acontecimientos que
+                        generan emociones compartidas, reuniones familiares
+                        y celebraciones populares.
+                    </p>
+
+                    <p>
+                        Las conquistas de 1978, 1986 y 2022 son ejemplos de
+                        cómo el fútbol puede formar parte de la memoria
+                        colectiva de una nación. Especialmente en Qatar 2022,
+                        millones de argentinos salieron a las calles para
+                        festejar el tercer campeonato mundial.
+                    </p>
+
+                    <p>
+                        Además, la Selección transmite valores como el esfuerzo,
+                        la perseverancia, la disciplina, el respeto y el
+                        trabajo en equipo.
+                    </p>
+
+                    <p>
+                        Por estas razones, Argentina no considera a su
+                        seleccionado solamente un equipo deportivo, sino
+                        también un símbolo de unión, orgullo e identidad
+                        nacional.
+                    </p>
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+<!-- PIE DE PÁGINA -->
+
+<footer class="footer">
+    <div class="wrap footer-inner">
+
+        <span>LA ALBICELESTE · Historia de la Selección Argentina</span>
+
+        <span>
+            Contenido resumido y organizado a partir del documento proporcionado.
+        </span>
+
+        <a class="backtop" href="#inicio">Volver arriba ↑</a>
+
+    </div>
+</footer>
+
+<script>
+    "use strict";
+
+    // MENÚ PARA CELULARES
+
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("navlinks");
+
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("open");
+        });
+    });
+
+    // FILTROS Y BUSCADOR DE LA LÍNEA DE TIEMPO
+
+    let active = "todos";
+
+    const search = document.getElementById("search");
+
+    const events = [
+        ...document.querySelectorAll(".event")
+    ];
+
+    const empty = document.getElementById("no-results");
+
+    function updateTimeline() {
+
+        const query = search.value.toLocaleLowerCase("es");
+
+        let count = 0;
+
+        events.forEach(event => {
+
+            const matchCategory =
+                active === "todos" ||
+                event.dataset.category === active;
+
+            const matchText =
+                event.innerText.toLocaleLowerCase("es").includes(query);
+
+            const show =
+                matchCategory && matchText;
+
+            event.hidden = !show;
+
+            if (show) {
+                count++;
+            }
+        });
+
+        empty.style.display = count ? "none" : "block";
+    }
+
+    // ACTIVAR FILTROS
+
+    document.querySelectorAll(".filter").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const current = document.querySelector(".filter.active");
+
+            if (current) {
+                current.classList.remove("active");
+            }
+
+            button.classList.add("active");
+
+            active = button.dataset.filter;
+
+            updateTimeline();
+        });
+    });
+
+    // ACTIVAR BUSCADOR
+
+    search.addEventListener("input", updateTimeline);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+.faq details {
+    background: #0d2038;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.faq summary {
+    padding: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq summary::after {
+    content: "+";
+    color: #79c9f2;
+    font-size: 22px;
+    transition: transform .3s;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+    transform: rotate(180deg);
+}
+
+.faq details p {
+    padding: 0 18px 18px;
+    color: #a8b8ca;
+    margin: 0;
+}
+    /* PREGUNTAS FRECUENTES */
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.faq details {
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color .3s, background .3s;
+}
+
+.faq details:hover {
+    border-color: rgba(121,201,242,.5);
+}
+
+.faq details[open] {
+    background: rgba(121,201,242,.07);
+    border-color: rgba(121,201,242,.45);
+}
+
+.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 22px;
+    font-size: 15px;
+    font-weight: 750;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+    color: #79c9f2;
+    font-size: 25px;
+    font-weight: 400;
+    transition: transform .3s;
+    flex-shrink: 0;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    padding: 0 22px 20px;
+    animation: aparecer .3s ease;
+}
+
+.faq-content p {
+    color: #a8b8ca;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 13px;
+}
+
+.faq-content p:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px) {
+    .faq summary {
+        padding: 17px;
+        font-size: 13px;
+    }
+
+    .faq-content {
+        padding: 0 17px 17px;
+    }
+}
